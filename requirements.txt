@@ -1,2 +1,12 @@
 pytest==8.2.2
 ruff==0.5.5
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+pillow
+torch
+torchvision
+notebook
+ipykernel
