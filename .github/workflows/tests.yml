@@ -1,0 +1,26 @@
+name: Code quality and tests
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - "feature/**"
+  pull_request:
+    branches:
+      - develop
+      - master
+
+jobs:
+  docker-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t fashion-mnist-checks .
+
+      - name: Run Ruff and tests
+        run: docker run --rm fashion-mnist-checks
