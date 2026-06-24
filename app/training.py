@@ -2,7 +2,11 @@ import pandas as pd
 import torch
 
 
-def train_model(model, train_loader, val_loader, criterion, optimizer, device, epochs=15):
+def train_model(
+        model,
+        train_loader,
+        val_loader,
+        criterion, optimizer, device, epochs=15):
     """Train a PyTorch model and evaluate it on validation data after each epoch.
 
     The function runs the full training loop for a given number of epochs.
