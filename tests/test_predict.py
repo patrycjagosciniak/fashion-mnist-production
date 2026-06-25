@@ -1,6 +1,6 @@
 import torch
 
-from app.predict import prepare_pixels, predict
+from app.predict import predict, prepare_pixels
 
 
 class DummyModel(torch.nn.Module):
