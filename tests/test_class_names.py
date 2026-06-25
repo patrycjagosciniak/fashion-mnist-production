@@ -1,6 +1,6 @@
 import pytest
 
-from app.class_names import FASHION_MNIST_CLASS_NAMES, get_class_name
+from app.ml.class_names import FASHION_MNIST_CLASS_NAMES, get_class_name
 
 
 def test_fashion_mnist_has_10_classes():
