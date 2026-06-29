@@ -10,3 +10,5 @@ torch
 torchvision
 notebook
 ipykernel
+fastapi
+uvicorn

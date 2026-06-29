@@ -2,7 +2,7 @@ from typing import Sequence, Union
 
 import torch
 
-from app.class_names import get_class_name
+from app.ml.class_names import get_class_name
 
 
 def prepare_pixels(
