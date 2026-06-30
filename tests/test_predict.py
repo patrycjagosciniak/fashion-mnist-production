@@ -50,3 +50,30 @@ def test_predict_returns_class_name_and_confidence():
     assert result["class_name"] == "Dress"
     assert isinstance(result["confidence"], float)
     assert 0.0 <= result["confidence"] <= 1.0
+
+
+def test_predict_uses_provided_class_names():
+    model = DummyModel()
+    pixels = [0] * 784
+    class_names = [
+        "class-0",
+        "class-1",
+        "class-2",
+        "custom-dress",
+        "class-4",
+        "class-5",
+        "class-6",
+        "class-7",
+        "class-8",
+        "class-9",
+    ]
+
+    result = predict(
+        model=model,
+        pixels=pixels,
+        class_names=class_names,
+        mean=0.0,
+        std=1.0,
+    )
+
+    assert result["class_name"] == "custom-dress"
