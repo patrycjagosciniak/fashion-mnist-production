@@ -2,7 +2,7 @@ import pandas as pd
 import torch
 from PIL import Image
 
-from app.preprocessing import calculate_mean_std, get_cnn_transform
+from app.ml.preprocessing import calculate_mean_std, get_cnn_transform
 
 
 def test_calculate_mean_std_returns_scaled_values():

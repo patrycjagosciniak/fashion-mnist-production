@@ -2,7 +2,7 @@ import pandas as pd
 from PIL import Image
 from torchvision import transforms
 
-from app.dataset import FashionMNISTCSV
+from app.ml.dataset import FashionMNISTCSV
 
 
 def test_fashion_mnist_csv_returns_correct_length():
