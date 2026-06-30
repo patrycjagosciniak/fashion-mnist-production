@@ -1,10 +1,14 @@
-from pydantic import BaseModel
+from typing import Annotated
+
+from pydantic import BaseModel, Field
+
+PixelValue = Annotated[float, Field(ge=0, le=255)]
 
 
 class PredictionInput(BaseModel):
     """Input data required for Fashion MNIST model prediction."""
 
-    pixels: list[float]
+    pixels: list[PixelValue] = Field(min_length=784, max_length=784)
 
 
 class PredictionOutput(BaseModel):

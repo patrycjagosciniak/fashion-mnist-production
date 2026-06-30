@@ -2,8 +2,6 @@ from typing import Sequence, Union
 
 import torch
 
-from app.ml.class_names import get_class_name
-
 
 def prepare_pixels(
     pixels: Sequence[Union[int, float]],
@@ -88,6 +86,6 @@ def predict(
 
     return {
         "predicted_class": predicted_class_id,
-        "class_name": get_class_name(predicted_class_id),
+        "class_name": class_names[predicted_class_id],
         "confidence": float(confidence.item()),
     }
